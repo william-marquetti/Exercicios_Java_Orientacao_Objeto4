@@ -1,91 +1,108 @@
 package exercicio2;
 
-import java.util.Date;
-
 public class RadioRelogio implements IRadio, IRelogio {
 
+	private String emissora;
+	private String tipoEmissora;
+	private int volumeRadio;
+	private int volumeRelogio;
+	private boolean alarme;
+	private long horario;
+	private long horarioAlarme;		
+	
+	public RadioRelogio(String emissora, String tipoEmissora, int volumeRadio, int volumeRelogio, boolean alarme, long horario, long horarioAlarme) {
+		setEmissora(emissora);
+		setTipoEmissora(tipoEmissora);
+		setVolumeRadio(volumeRadio);
+		setVolumeRelogio(volumeRelogio);
+		
+	
+	}
+	
+	public boolean isAlarme() {
+		return alarme;
+	}
+
+	public void setAlarme(boolean alarme) {
+		this.alarme = alarme;
+	}
+
 	@Override
-	public void setHorario(Date horario) {
-		// TODO Auto-generated method stub
+	public void setHorario(long horario) {
+		this.horario = horario;
 		
 	}
 
 	@Override
-	public Date getHorario() {
-		// TODO Auto-generated method stub
-		return null;
+	public long getHorario() {
+		return this.horario;
 	}
 
 	@Override
-	public void setHorarioAlarme(Date horarioAlarme) {
-		// TODO Auto-generated method stub
+	public void setHorarioAlarme(long horarioAlarme) {
+		this.horarioAlarme = horarioAlarme;
 		
 	}
 
 	@Override
-	public Date getHorarioAlarme() {
-		// TODO Auto-generated method stub
-		return null;
+	public long getHorarioAlarme() {
+		return this.horarioAlarme;
 	}
 
 	@Override
 	public void ligarAlarme() {
-		// TODO Auto-generated method stub
+		this.alarme = true;
 		
 	}
 
 	@Override
 	public void desligarAlarme() {
-		// TODO Auto-generated method stub
+		this.alarme = false;
 		
 	}
 
 	@Override
 	public void setVolumeRelogio(int volumeRelogio) {
-		// TODO Auto-generated method stub
+		this.volumeRelogio = volumeRelogio;
 		
 	}
 
 	@Override
 	public int getVolumeRelogio() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.volumeRelogio;
 	}
 
 	@Override
 	public void setEmissora(String emissora) {
-		// TODO Auto-generated method stub
+		this.emissora = emissora;
 		
 	}
 
 	@Override
 	public String getEmissora() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.emissora;
 	}
 
 	@Override
 	public void setTipoEmissora(String tipoEmissora) {
-		// TODO Auto-generated method stub
+		this.tipoEmissora = tipoEmissora;
 		
 	}
 
 	@Override
 	public String getTipoEmissora() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.tipoEmissora;
 	}
 
 	@Override
 	public void setVolumeRadio(int volume) {
-		// TODO Auto-generated method stub
+		this.volumeRadio = volume;
 		
 	}
 
 	@Override
 	public int getVolumeRadio() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.volumeRadio;
 	}
 
 }

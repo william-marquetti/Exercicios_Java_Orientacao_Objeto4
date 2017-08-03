@@ -1,14 +1,12 @@
 package exercicio2;
 
-import java.util.Date;
-
 public interface IRelogio {
 	
-	public void setHorario(Date horario);
-	public Date getHorario();
+	public void setHorario(long horario);
+	public long getHorario();
 	
-	public void setHorarioAlarme(Date horarioAlarme);
-	public Date getHorarioAlarme();
+	public void setHorarioAlarme(long horarioAlarme);
+	public long getHorarioAlarme();
 	
 	public void ligarAlarme();
 	public void desligarAlarme();
