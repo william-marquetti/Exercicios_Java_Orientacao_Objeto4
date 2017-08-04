@@ -10,7 +10,7 @@ public class Data {
 		dia = d; mês = m; ano = a;
 	}
 	
-	public Stroing toString(){
+	public String toString(){
 		return dia +"/"+mês+"/"+ano;
 	}
 	
@@ -31,12 +31,14 @@ public class Data {
 	private byte dia, mes; 
 	private short ano;
 	
-	Data(byte d, byte m, byte a){
-		dia = d; mes = m; ano = a;
+	Data(byte d, byte m, short a){
+		setDia(d);
+		setMes(m);
+		setAno(a);
 	}
 	
 	public String toString(){
-		return dia +"/"+mes+"/"+ano;
+		return "\nData: "+ getDia() +"/"+ getMes() +"/"+ getAno();
 	}
 
 	public byte getDia() {
